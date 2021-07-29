@@ -99,8 +99,8 @@ def multivariate_clustering(data, nb_clusters=3, metric="euclidean", linkage_met
     # join transformed data sets
     merged_data = dict_transformed_data["cumulative_GDD"].join(dict_transformed_data["cumulative_PRECTOT"], rsuffix='_other')
 
-    for col in selected_cols[2:]:
-        merged_data = merged_data.join(dict_transformed_data[col], rsuffix='_other_')
+    # for col in selected_cols[2:]:
+    #     merged_data = merged_data.join(dict_transformed_data[col], rsuffix='_other_')
     
     # perform the clustering
     X = merged_data
